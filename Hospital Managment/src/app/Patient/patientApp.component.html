@@ -1,0 +1,70 @@
+<div class="div">
+<div class="bg">
+<form [formGroup]="Patientobj.formPatientGroup"> <br><br>
+
+    <!--Patient ID: <input [ngModelOptions]="{standalone: true}"
+      [(ngModel)]="Patientobj.id" type="text" value=""/><br>--> 
+<div style="text-align:center; font-weight:bold;">
+    Patient Name:<input type="text" 
+                          formControlName="namecontrol" 
+                          [(ngModel)]="Patientobj.name" 
+                          value="" id=""/><br>
+      
+      
+      <div style="color: red; font-weight: lighter;" [hidden]="!(Patientobj.formPatientGroup
+                      .controls['namecontrol']
+                    .hasError('required'))">
+                    
+        !Patient Name is required
+      </div><br><br>
+      
+      Patient Problem:<input type="text"
+                                 formControlName="problemdesccontrol" 
+                                [(ngModel)]="patientProblem.problemDescription" 
+                                 value=""/><br>
+    
+    
+      <div  style="color: red; font-weight: lighter;"[hidden]="!(Patientobj.formPatientGroup
+                    .controls['problemdesccontrol']
+                    .hasError('required'))">
+                                
+          !Patient Problem is required
+      </div><br><br>
+      <input type="button" value="AddNewProblem " (click)="AddProblem()" /><br><br>
+
+      <input type="submit" 
+                          value="ADD_ALL" 
+                          (click)="Submit()" /><br /><br /><br />
+                        </div>
+</form>
+</div>
+<br><br>
+<table class="src" align="center" border="1">
+  <tr>
+     
+      <th>PROBLEM DISCRIPTION</th>
+  </tr>
+  <tr *ngFor="let Problem of Patientobj.patientProblems">
+          
+          <td>{{Problem.problemDescription}}</td>
+     </tr>
+</table> &nbsp;&nbsp;
+  <table class="src" align="center" border="1">
+      <tr>
+          <th>PATIENT ID</th>
+          <th>PATIENT NAME</th>
+          <th>PROBLEM DISCRIPTION</th>
+      </tr>
+      <tr *ngFor="let C of Patientobjs">
+              <td>{{C.id}}</td>
+              <td>{{C.name}}</td>
+              <td *ngFor="let prob of obj.problems">
+                {{prob.problemDescription}}</td>
+         </tr>
+    </table>
+
+</div>
+  
+  
+  
+  

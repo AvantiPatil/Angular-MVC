@@ -1,0 +1,21 @@
+
+<div style="margin-top: 50px; margin-left: 500px;
+            margin-right: 500px; margin-bottom: 400px; border:3px black;">
+            
+  <div class ="src" style="font-weight: bold;" >
+Patient Name:<input type="text" [(ngModel)]="patientName" name="" id=""><br><br>
+<input type="button" (click)="search()" value="search"/><br>
+  </div>
+<br><br>
+<table class="table" border="1">
+    <tr>
+        <td>Name</td>
+        <td>Description</td>
+    </tr>
+    <tr *ngFor="let p of patientModels">
+      <td>{{p.name}}</td>
+      <td>{{p.problemDescription}}</td>
+  </tr>
+   
+</table>
+</div>

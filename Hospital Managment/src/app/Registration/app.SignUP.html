@@ -1,0 +1,50 @@
+            <h1>Registration Form</h1>
+
+<div class="example-container">
+        <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+            <mat-label>
+               <input matInput #input maxlength="10" placeholder="Enter First Name"></mat-label>
+                 <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+         </mat-form-field>
+</div><br><br>
+<div class="example-container">
+    <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+        <mat-label>
+            <input matInput #input maxlength="10" placeholder="Enter Last Name"></mat-label>
+             <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+     </mat-form-field>
+</div><br><br>
+                  
+
+<div class="example-container" style="color: red">
+         <mat-form-field appearance="fill">
+                 <mat-label>
+                    <input matInput placeholder="UserName" [formControl]="userName" required></mat-label>
+                    <mat-error *ngIf="userName.Invalid">{{ErrorMessage()}}</mat-error>
+            </mat-form-field>
+ </div><br><br>
+ 
+<div class="example-container" style="color: red">
+    <mat-form-field appearance="fill">
+      <mat-label>
+      <input matInput placeholder="Email" [formControl]="Email" required></mat-label>
+      <mat-error *ngIf="Email.Invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+</div><br><br>
+<div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password"></mat-label>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field><br><br>
+<div class="example-button-row">
+    
+    <button mat-raised-button color="primary" (click)="SignUp()" >SIGN_UP</button>
+
+</div>
+
+<div *ngFor="let Reg of RegisterObj.UserNames"></div>
+
+

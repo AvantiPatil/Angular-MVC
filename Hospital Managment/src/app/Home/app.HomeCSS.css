@@ -1,0 +1,58 @@
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+.bg{
+    
+    background: cover;
+    height: 500px;
+    text-align: center;
+    padding: 50px;
+    color:black;
+}
+.src{
+    
+    height: 100px;
+    text-align: center;
+    font: italic;
+    font-size: 20px;
+}
+
+
+:host {
+display: flex;
+justify-content: center;
+margin: 100px 0px;
+}
+
+.mat-form-field {
+width: 100%;
+min-width: 300px;
+}
+
+mat-card-title,
+mat-card-content {
+text-align: center;
+display: flex;
+justify-content: center;
+}
+
+.error {
+padding: 10px;
+width: 300px;
+color: white;
+background-color: red;
+}
+
+.button {
+display: flex;
+justify-content: flex-end;
+}

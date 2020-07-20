@@ -1,0 +1,79 @@
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+<mat-card-content>
+<form>
+
+  <div class="example-container" style="color: red">
+    <mat-form-field appearance="fill">
+            <mat-label>
+               <input matInput placeholder="UserName" [formControl]="userName" required></mat-label>
+               <mat-error *ngIf="userName.Invalid">{{ErrorMessage()}}</mat-error>
+       </mat-form-field>
+</div><br><br>
+
+<p>
+  <mat-form-field>
+    <input  [(ngModel)]="Loginobj.password" type="password"  placeholder="Password">
+  </mat-form-field>
+</p><br>
+
+
+
+<div class="example-button-row">
+  <button  mat-raised-button color="primary" (click)="SignIn()">SIGN_IN</button><br><br>
+   <p color:blue>
+    Doesn't Have an account then click here
+  </p>
+    <button mat-raised-button color="primary" routerLink="/Register">SIGN_UP</button>
+    
+  </div>
+
+</form>
+
+</mat-card-content>
+</mat-card>
+
+
+<!--<form [formGroup]="Loginobj.formloginGroup"> <br><br>
+<div style="margin-top: 50px; margin-left: 500px;
+            margin-right: 500px; margin-bottom: 400px; border:3px black;">
+            
+
+UserName:<input type="text" 
+                formControlName="Unamecontrol" 
+                [(ngModel)]="Loginobj.userName" name=""><br><br>
+
+                <div style="color: red; font-weight: lighter;"
+                 [hidden]="!(Loginobj.formloginGroup
+                .controls['Unamecontrol']
+              .hasError('required'))">
+              
+  !UserName is required
+</div><br><br>
+
+Password:<input type="password" 
+                formControlName="passwordcontrol" 
+                 [(ngModel)]="Loginobj.password" name=""><br><br>
+
+                 <div style="color: red; font-weight: lighter;"
+                 [hidden]="!(Loginobj.formloginGroup
+                .controls['passwordcontrol']
+              .hasError('required'))">
+              
+  !Password is required
+</div><br><br>
+<div *ngIf="isLoginError" >
+  Incorrect username or password
+</div>
+<div class="example-button-row">
+<button  mat-raised-button color="primary" (click)="SignIn()">SIGN_IN</button><br><br>
+ 
+  Doesn't Have an account then click here
+
+  <button mat-raised-button color="primary" routerLink="/Register">SIGN_UP</button>
+  
+</div>
+<br><br>
+</div>
+</form>-->
+

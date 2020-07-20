@@ -1,0 +1,23 @@
+.bg{
+    
+    color: black;
+    padding: 25px;
+}
+
+.src{
+
+    color: black;
+    background-color: #d0c4d6;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.div{
+    
+    margin-top: 10px;
+    margin-left: 300px;
+    margin-right: 400px;
+   
+    text-align: center;
+}
