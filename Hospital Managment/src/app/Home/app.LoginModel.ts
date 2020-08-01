@@ -5,27 +5,27 @@ import { NgForm,
       FormBuilder} from '@angular/forms'
 
 export class LoginModel{
-    userName:string="";
-    password:string="";
+    userName:string="Avanti";
+    password:string="123";
     token:string="";
 
 
-    //formloginGroup:FormGroup = null;
+    formloginGroup:FormGroup = null;
 
-    //constructor(){
+    constructor(){
         //tree structure
-        //var _builder = new FormBuilder();
+        var _builder = new FormBuilder();
         //use the builder
-      //  this.formloginGroup = _builder.group({}); 
+        this.formloginGroup = _builder.group({}); 
         //add vlidation to formGroup
-        // this.formloginGroup.addControl("Unamecontrol",
-          //   new FormControl('',Validators.required));
+         this.formloginGroup.addControl("Unamecontrol",
+             new FormControl('',Validators.required));
  
-        // this.formloginGroup.addControl("passwordcontrol",
-        //     new FormControl('',
-           //   [Validators.minLength(8),
-           //      Validators.required]));
+         this.formloginGroup.addControl("passwordcontrol",
+           new FormControl('',
+          [Validators.minLength(8),
+                Validators.required]));
           
-        //}
+        }
     
 }

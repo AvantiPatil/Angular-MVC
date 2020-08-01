@@ -13,7 +13,7 @@ namespace WebApplication3.Models
        public int id { get; set; }
 
         [Required]
-        [RegularExpression("^[a-z]{1,10}$")]
+        [RegularExpression("^[a-z]{1,10}$")] 
         public string name { get; set; }
 
        //to many relationship

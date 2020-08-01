@@ -12,6 +12,7 @@ export class PatientComponent {
   
   Patientobj:Patient= null;
   patientProblem:patientProblem=new patientProblem();
+
   Patientobjs:Array<Patient> = new Array<Patient>();
   
       constructor(private Http:HttpClient){
@@ -49,6 +50,7 @@ export class PatientComponent {
         
     alert(res);
       }
+
  
 }
 

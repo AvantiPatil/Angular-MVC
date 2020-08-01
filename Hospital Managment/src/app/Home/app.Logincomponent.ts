@@ -2,7 +2,7 @@ import {   Component  } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { LoginModel } from './app.LoginModel';
 import { Router } from '@angular/router';
-import {FormControl, Validators} from '@angular/forms';
+
 
 
 @Component({
@@ -15,7 +15,7 @@ import {FormControl, Validators} from '@angular/forms';
 
 export class LoginComponent {
   //Loginobj:LoginModel= new LoginModel();
- 
+
  
   constructor(public http:HttpClient ,
      public Loginobj:LoginModel,
@@ -45,15 +45,7 @@ SignIn()
     this.routing.navigate(['Registration'])
     
   }
-  userName = new FormControl('', [Validators.required, Validators.pattern["^[A-Z][a-z]{1,10}$"]] );
-
-  ErrorMessage() {
-    if (this.userName.hasError('required')) {
-      return '*You must enter a value';
-    }
-
   
-  }
- 
+  
 }
 

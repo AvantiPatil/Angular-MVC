@@ -30,6 +30,7 @@
                                 
           !Patient Problem is required
       </div><br><br>
+
       <input type="button" value="AddNewProblem " (click)="AddProblem()" /><br><br>
 
       <input type="submit" 
@@ -58,7 +59,7 @@
       <tr *ngFor="let C of Patientobjs">
               <td>{{C.id}}</td>
               <td>{{C.name}}</td>
-              <td *ngFor="let prob of obj.problems">
+              <td *ngFor="let prob of C.problems ">
                 {{prob.problemDescription}}</td>
          </tr>
     </table>
@@ -67,4 +68,12 @@
   
   
   
-  
+<!--<div>
+  Patient Problem: <select (change)="Select()" [(ngModel)]="patientProblem.problemDescription" 
+  [ngModelOptions]="{standalone: true}" value="">
+      <option value="0">--Select--</option>
+      <option *ngFor="let prob of C.problems " value={{Problems}}>
+          {{summary}}
+      </option>
+  </select>
+</div><br>-->

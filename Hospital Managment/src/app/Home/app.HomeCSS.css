@@ -1,3 +1,6 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
 
 .example-label {
     display: table-cell;
@@ -10,14 +13,10 @@
     display: table-cell;
     width: 490px;
   }
-.bg{
-    
-    background: cover;
-    height: 500px;
-    text-align: center;
-    padding: 50px;
-    color:black;
-}
+  .example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
 .src{
     
     height: 100px;
@@ -56,3 +55,4 @@ background-color: red;
 display: flex;
 justify-content: flex-end;
 }
+

@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { RouterModule} from '@angular/router';
 import { PatientHomeRoutes } from '../Routes/HomeRoutes';
 import { CommonModule } from '@angular/common';
@@ -7,15 +7,15 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './Home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
 //import { LoginModel } from '../Login/app.LoginModel';
 import { SecurityLogic } from '../Utility/Utility.Authguard';
 import { JWTInterceptor } from '../Utility/Utility.Interceptor';
 import { LoginModel } from './app.LoginModel';
 import { LoginComponent } from './app.Logincomponent';
 import { RegistrationComponent } from '../Registration/app.SignUpComponent';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MaterialModule } from '../material.module';
+
 
 
 
@@ -25,9 +25,12 @@ import { MaterialModule } from '../material.module';
     RegistrationComponent,
     LoginComponent,
     MasterPageComponent,
+  
+
     
   ],
   imports: [
+  
     HttpClientModule,
     BrowserModule,
     CommonModule,
@@ -35,12 +38,10 @@ import { MaterialModule } from '../material.module';
     ReactiveFormsModule,
     RouterModule.forRoot(PatientHomeRoutes),
     BrowserAnimationsModule,
-    MaterialModule,
-   
-   
+  MaterialModule,
   ],
   schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
+
   ],
   providers: [LoginModel,SecurityLogic,
   {provide:HTTP_INTERCEPTORS, useClass:JWTInterceptor,multi:true}],

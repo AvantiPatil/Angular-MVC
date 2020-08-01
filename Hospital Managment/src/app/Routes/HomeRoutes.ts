@@ -12,7 +12,7 @@ export const PatientHomeRoutes =[
     
     {path:'Home', component:HomeComponent ,canActivate : [SecurityLogic] },
     {path:'Login', component:LoginComponent},
-    {path:'Register',component:RegistrationComponent},
+    {path:'Register',component:RegistrationComponent, canActivate : [SecurityLogic] },
     {path:'Patient',loadChildren:'../Patient/patientApp.module#PatientModule' , 
     canActivate : [SecurityLogic]},
     {path:'Search', loadChildren: '../Search/patientApp.SearchModule#SearchModule' ,
